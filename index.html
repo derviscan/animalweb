@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Animals Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #e74c3c;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .lost-animal {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .contact-us {
+            text-align: center;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Search Bar -->
+        <form id="searchForm">
+            <input type="text" placeholder="Search for a lost animal..." id=" searchedName" style="width: 100%; margin-bottom: 20px;">
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Featured Lost Animal -->
+        <div class="lost-animal">
+            <h2>Featured Lost Animal</h2>
+            <h3>Name: Fuzzy</h3>
+            <p>Ages: 3 years old</p>
+            <p>Breed: Unknown</p>
+            <p>Description: Spiky black fur with white spots. Lost in the city last week.</p>
+        </div>
+
+        <!-- Recent Recoveries -->
+        <h2>Recent Recoveries</h2>
+        <ul>
+            <li class="lost-animal">
+                <h3>Name: Whiskers</h3>
+                <p>Ages: 5 years old</p>
+                <p>Breed: Cat</p>
+                <p>Description: Black cat found in a park last month.</p>
+            </li>
+        </ul>
+
+        <!-- Contact Us -->
+        <div class="contact-us">
+            <h2>Need to Report a Lost Animal?</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" id="name" style="margin-bottom: 10px;">
+                <input type="email" placeholder="Email" id="email" style="margin-bottom: 10px;">
+                <textarea rows="5" placeholder="Describe the lost animal..." id="description"></textarea>
+                <button type="submit">Report Lost Animal</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Add any JavaScript functionality here, like search function
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchedName = document.getElementById('spectedName').value;
+            alert(searchedName + ' has been found!');
+        });
+
+        // Add more features as needed
+    </script>
+</body>
+</html>
